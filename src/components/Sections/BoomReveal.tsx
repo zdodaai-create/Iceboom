@@ -118,8 +118,6 @@ export default function BoomReveal() {
             ref={canvasRef}
             className="w-full h-full block"
           />
-          {/* Subtle vignette over the tub to keep it looking luxurious */}
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-brand-black opacity-60 pointer-events-none" />
         </div>
       </div>
     </section>

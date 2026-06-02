@@ -73,8 +73,6 @@ export default function StorySequence() {
         .to(".screen-3", { opacity: 0, duration: 1.5 });
 
       // --- SCREEN 4: THE REVEAL ---
-      // Expand dark gold gradient
-      tl.to(".s4-bg-glow", { scale: 2.5, opacity: 0.8, duration: 3 });
       tl.to(".screen-4", { opacity: 1, duration: 1 }, "-=3");
       // Contract letter spacing
       tl.fromTo(".s4-title", 
@@ -148,9 +146,6 @@ export default function StorySequence() {
 
         {/* --- SCREEN 4: THE REVEAL --- */}
         <div className="screen-4 absolute inset-0 flex items-center justify-center opacity-0 bg-brand-black overflow-hidden">
-          {/* Expanding Radial Gold Glow */}
-          <div className="s4-bg-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40vw] h-[40vh] bg-brand-gold/20 rounded-full blur-[100px] pointer-events-none opacity-0 scale-50" />
-          
           <h2 className="s4-title text-5xl md:text-7xl lg:text-9xl font-serif font-bold text-brand-gold text-center relative z-10 drop-shadow-[0_0_40px_rgba(212,175,55,0.6)] px-4">
             Welcome to BOOM.
           </h2>
