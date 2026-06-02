@@ -11,7 +11,7 @@ export default function StorySequence() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Generate random particles only on the client to prevent SSR hydration errors
-  const [particles, setParticles] = useState<Array<{size: number, top: number, left: number, opacity: number, blur: number}>>([]);
+  const [particles, setParticles] = useState<Array<{size: number, top: number, left: number, opacity: number}>>([]);
 
   useEffect(() => {
     setParticles([...Array(40)].map(() => ({
