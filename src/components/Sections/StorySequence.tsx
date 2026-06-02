@@ -19,7 +19,6 @@ export default function StorySequence() {
       top: Math.random() * 100,
       left: Math.random() * 100,
       opacity: Math.random() * 0.4 + 0.1,
-      blur: Math.random() * 2,
     })));
   }, []);
 
@@ -54,8 +53,8 @@ export default function StorySequence() {
       tl.to(".screen-2", { opacity: 1, duration: 1 });
       // Word by word stagger
       tl.fromTo(".s2-word", 
-        { opacity: 0, y: 30, filter: "blur(10px)" }, 
-        { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.5, stagger: 0.3 }, 
+        { opacity: 0, y: 30 }, 
+        { opacity: 1, y: 0, duration: 1.5, stagger: 0.3 }, 
         "-=0.5"
       );
       // Parallax particles on scroll (they move up as you scroll down)
@@ -79,8 +78,8 @@ export default function StorySequence() {
       tl.to(".screen-4", { opacity: 1, duration: 1 }, "-=3");
       // Contract letter spacing
       tl.fromTo(".s4-title", 
-        { letterSpacing: "0.4em", opacity: 0, filter: "blur(5px)" }, 
-        { letterSpacing: "normal", opacity: 1, filter: "blur(0px)", duration: 2.5 }, 
+        { letterSpacing: "0.4em", opacity: 0 }, 
+        { letterSpacing: "normal", opacity: 1, duration: 2.5 }, 
         "-=2.5"
       );
       
@@ -124,7 +123,6 @@ export default function StorySequence() {
                   top: p.top + "%",
                   left: p.left + "%",
                   opacity: p.opacity,
-                  filter: `blur(${p.blur}px)`,
                 }}
               />
             ))}
