@@ -9,9 +9,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#0A0A0A",
+        foreground: "#F8F3E7",
+        brand: {
+          black: "#0A0A0A",
+          gold: "#D4AF37",
+          cream: "#F8F3E7",
+          chocolate: "#3A2314"
+        }
       },
+      fontFamily: {
+        sans: ['var(--font-inter)', 'sans-serif'],
+        serif: ['var(--font-playfair)', 'serif'],
+      }
     },
   },
   plugins: [],
